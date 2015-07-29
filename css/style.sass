@@ -1,9 +1,35 @@
 ---
 ---
 
+//Colors
+$orange-yellow: #FFEC94
+$cornflower-lilac: #FFAEAE
+$orange-yellow-light: #FFF0AA
+$yellow-green: #B0E57C
+$blue-light: #B4D8E7
+$blue: #56BAEC
+
+//Fonts
+$font-family-serif: Vollkorn, serif
+$font-family-base: $font-family-serif
+$font-size-base: 20px
+
+//Navbar
+$navbar-default-bg: $cornflower-lilac
+$navbar-default-color: mix($navbar-default-bg, #FFFFFF, 10%)
+
+$navbar-default-link-color: $navbar-default-color
+
+$navbar-default-brand-color: mix($navbar-default-bg, #000000, 50%)
+
 @import "bootstrap"
 @import url(http://fonts.googleapis.com/css?family=Pacifico|Playfair+Display:700,700italic|Vollkorn:400,700,400italic,700italic&subset=latin,latin-ext)
 
 body
-    padding-top: 70px
+  padding-top: 70px
 
+.navbar-brand
+  font-family: Pacifico
+
+.navbar-default
+  font-family: 'Playfair Display'
