@@ -15,21 +15,63 @@ $font-family-base: $font-family-serif
 $font-size-base: 20px
 
 //Navbar
-$navbar-default-bg: $cornflower-lilac
-$navbar-default-color: mix($navbar-default-bg, #FFFFFF, 10%)
+$navbar-default-bg: $yellow-green
+$navbar-default-color: mix($navbar-default-bg, #FFFFFF, 20%)
 
 $navbar-default-link-color: $navbar-default-color
+$navbar-default-link-hover-color: $navbar-default-link-color
 
 $navbar-default-brand-color: mix($navbar-default-bg, #000000, 50%)
 
 @import "bootstrap"
 @import url(http://fonts.googleapis.com/css?family=Pacifico|Playfair+Display:700,700italic|Vollkorn:400,700,400italic,700italic&subset=latin,latin-ext)
 
+//Push body below navbar
 body
-  padding-top: 70px
+  padding-top: 100px
 
 .navbar-brand
   font-family: Pacifico
 
 .navbar-default
   font-family: 'Playfair Display'
+
+  .navbar-nav
+    li
+      a
+        transition: background-color 0.3s ease
+        &:hover
+          background-color: mix($navbar-default-bg, #000000, 90%)
+
+img
+  display: block
+  margin-left: auto
+  margin-right: auto
+  margin-top: 40px
+  margin-bottom: 40px
+
+//Debug
+div
+  #color1
+    color: $orange-yellow
+    background-color: $orange-yellow
+
+  #color2
+    color: $orange-yellow-light
+    background-color: $orange-yellow-light
+
+  #color3
+    color: $cornflower-lilac
+    background-color: $cornflower-lilac
+
+  #color4
+    color: $yellow-green
+    background-color: $yellow-green
+
+  #color5
+    color: $blue
+    background-color: $blue
+
+  #color6
+    color: $blue-light
+    background-color: $blue-light
