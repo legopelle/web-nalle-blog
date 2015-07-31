@@ -6,8 +6,9 @@
     </div>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Archive</a></li>
+      {% for page in site.pages %}
+      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endfor %}
     </ul>
   </div>
 </nav>
