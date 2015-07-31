@@ -16,12 +16,14 @@ $font-size-base: 20px
 
 //Navbar
 $navbar-default-bg: $yellow-green
-$navbar-default-color: mix($navbar-default-bg, #FFFFFF, 20%)
+$navbar-default-color: mix($navbar-default-bg, black, 50%)
 
 $navbar-default-link-color: $navbar-default-color
 $navbar-default-link-hover-color: $navbar-default-link-color
+$navbar-default-link-hover-bg: mix($navbar-default-bg, black, 95%)
 
-$navbar-default-brand-color: mix($navbar-default-bg, #000000, 50%)
+$navbar-default-brand-color: $navbar-default-color
+$navbar-default-brand-hover-color: mix($navbar-default-bg, $navbar-default-brand-color, 50%)
 
 @import "bootstrap"
 @import url(http://fonts.googleapis.com/css?family=Pacifico|Playfair+Display:700,700italic|Vollkorn:400,700,400italic,700italic&subset=latin,latin-ext)
@@ -30,9 +32,7 @@ $navbar-default-brand-color: mix($navbar-default-bg, #000000, 50%)
 body
   padding-top: 100px
 
-.navbar-brand
-  font-family: Pacifico
-
+//Custom default navbar
 .navbar-default
   font-family: 'Playfair Display'
 
@@ -40,8 +40,10 @@ body
     li
       a
         transition: background-color 0.3s ease
-        &:hover
-          background-color: mix($navbar-default-bg, #000000, 90%)
+
+  .navbar-brand
+    font-family: Pacifico
+    transition: color 0.5s ease
 
 img
   display: block
