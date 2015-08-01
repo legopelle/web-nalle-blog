@@ -1,14 +1,14 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
+  <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Nalle</a>
+      <a class="navbar-brand" href="/">Nalle</a>
       <p class="navbar-text"><em>a blog of two</em></p>
     </div>
 
     <ul class="nav navbar-nav navbar-right">
-      {% for page in site.pages %}
-      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-      {% endfor %}
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/archive.html">Archive</a></li>
     </ul>
   </div>
 </nav>
