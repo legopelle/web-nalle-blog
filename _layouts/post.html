@@ -1,17 +1,31 @@
 ---
 layout: default
 ---
-
-<div class="adjecent-posts">
-  <a href="#" class="prev-post"><small>&laquo; Prev</small></a>
-  <a href="#" class="next-post"><small>&raquo; Next</small></a>
-  <div class="floatclear"></div>
+<div class="col-md-2">
 </div>
+<div class="col-md-8">
+  <div class="post">
+    <div class="adjecent-posts">
+      {% if page.previous %}
+      <a href="{{ page.previous.url }}" class="prev-post">&laquo; {{ page.previous.title }}</a>
+      {% endif %}
 
-<div class="page-header">
-  <h1>{{ post.title }}</h1>
+      {% if page.next %}
+      <a href="{{ page.next.url }}" class="next-post">{{ page.next.title }} &raquo;</a>
+      {% endif %}
+
+      <div class="floatclear"></div> 
+    </div>
+
+    <div class="page-header">
+      <h1>{{ page.title }}<br>
+        <small><p class="text-right">{{ page.date | date: '%b %d, %Y' }}</p></small></h1>
+    </div>
+
+    <article class="post-content">
+      {{ content }}
+    </article>
+  </div>
 </div>
-
-<article class="post-content">
-  {{ content }}
-</article>
+<div class="col-md-2">
+</div>
