@@ -1,11 +1,9 @@
 ---
 ---
 
-@import 'bootstrap'
 @import url(http://fonts.googleapis.com/css?family=Pacifico|Playfair+Display:700,700italic|Vollkorn:400,700,400italic,700italic&subset=latin,latin-ext)
-@import 'post'
 
-//Colors
+//Base Colors
 $orange-yellow: #FFEC94
 $cornflower-lilac: #FFAEAE
 $orange-yellow-light: #FFF0AA
@@ -20,7 +18,12 @@ $font-size-base: 20px
 
 $headings-font-family: 'Playfair Display'
 $headings-line-height: 1.5
-//$headings-color: $blue
+
+$headings-small-color: $blue-light
+
+// Links
+$link-color: $blue
+$link-hover-color: $blue-light
 
 //Navbar
 $navbar-default-bg: $yellow-green
@@ -33,6 +36,8 @@ $navbar-default-link-hover-bg: mix($navbar-default-bg, black, 95%)
 $navbar-default-brand-color: $navbar-default-color
 $navbar-default-brand-hover-color: mix($navbar-default-bg, $navbar-default-brand-color, 50%)
 
+@import 'bootstrap'
+@import 'post'
 
 //Push body below navbar
 body
@@ -51,6 +56,7 @@ body
     font-family: Pacifico
     transition: color 0.5s ease
 
+// Images are centered
 img
   display: block
   margin-left: auto
@@ -58,6 +64,11 @@ img
   margin-top: 40px
   margin-bottom: 40px
 
+// Justified text
+article
+  p
+    text-align: justify
+  
 //Debug
 div
   #color1
